@@ -42,4 +42,4 @@ php artisan migrate
 php artisan serve
 ```
 
-### Teste suas Rotas em rest.http com swagger em localhost:8000/api/documentation
+### Teste suas Rotas em rest.http, ou com swagger em http://localhost:8000/api/documentation
