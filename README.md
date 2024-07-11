@@ -13,7 +13,7 @@ Este projeto é uma API Rest em JSON para cadastro de events, utilizando PHP com
 ### Inicie seu Banco de dados Mysql
 
 ```sh
-docker compose -f docker-compose.yaml up -d
+docker compose -f docker-composer.yaml up -d
 ```
 
 ### 1. Instale as Dependências
