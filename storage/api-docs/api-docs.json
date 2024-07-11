@@ -1,0 +1,164 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Events API",
+        "description": "API documentation for My API",
+        "contact": {
+            "email": "hericklucas.hlf@gmail.com"
+        },
+        "license": {
+            "name": "MIT License",
+            "url": "https://opensource.org/licenses/MIT"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/events/findAll": {
+            "get": {
+                "tags": [
+                    "Find All Events"
+                ],
+                "summary": "Get all events",
+                "description": "Get all events",
+                "operationId": "94341dd7cdd799fbd306ea79ae1c10a0",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/events/findOne/{id}": {
+            "get": {
+                "tags": [
+                    "Find One Event"
+                ],
+                "summary": "Get One Event",
+                "description": "Get One Event",
+                "operationId": "4e436d8b600b7c9c6a7d5f7fa59f6665",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "event id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "example": 3
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/events/findAlway/?searchTerm": {
+            "get": {
+                "tags": [
+                    "Find Events By Serach"
+                ],
+                "summary": "Get Events By Search",
+                "description": "Get Events By Serach",
+                "operationId": "376deb17a55ebbeee9da3505bd319ee1",
+                "parameters": [
+                    {
+                        "name": "searchTerm",
+                        "in": "query",
+                        "description": "query Term",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": "gothan"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/events/create": {
+            "post": {
+                "tags": [
+                    "Create Event"
+                ],
+                "summary": "Create new Event",
+                "description": "Create new Event",
+                "operationId": "cb3ef4822272b6d43283f7a3c8b77529",
+                "requestBody": {
+                    "description": "Event data",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "title": {
+                                        "type": "string",
+                                        "example": "Cine"
+                                    },
+                                    "city": {
+                                        "type": "string",
+                                        "example": "Curitiba"
+                                    },
+                                    "private": {
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "description": {
+                                        "type": "string",
+                                        "example": "View one movie"
+                                    },
+                                    "date": {
+                                        "type": "string",
+                                        "example": "2024-07-11 15:30:00"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Event created successfully",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Find All Events",
+            "description": "Find All Events"
+        },
+        {
+            "name": "Find One Event",
+            "description": "Find One Event"
+        },
+        {
+            "name": "Find Events By Serach",
+            "description": "Find Events By Serach"
+        },
+        {
+            "name": "Create Event",
+            "description": "Create Event"
+        }
+    ]
+}

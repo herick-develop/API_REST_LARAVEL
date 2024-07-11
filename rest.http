@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:8000
+
+###
+
+# @name findAllEvents
+GET {{baseUrl}}/events/findAll
+
+###
+
+# @name findOneEvent
+GET {{baseUrl}}/events/findOne/13
+
+###
+
+# @name findAlway
+GET {{baseUrl}}/events/findAlway/?searchTerm=parana
+
+###
+
+# @name createEvent
+POST {{baseUrl}}/events/create
+Content-Type: application/json
+
+{
+    "title": "HAHAHAHA51",
+    "city": "paraná",
+    "private": 1,
+    "description": "gothan city",
+    "date": "2024-07-11 15:30:00"
+}
